@@ -1,0 +1,21 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let head of header; let i = index" (click)="onSort($event,head.key,i)">{{head.header}} <i
+                        *ngIf="count==1 && i==clickedIndexHeader" class="fa fa-arrow-down"></i><i
+                        *ngIf="count==2 && i==clickedIndexHeader" class="fa fa-arrow-up"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let table of marksDetails">
+                <td>{{table.name}}</td>
+                <td>{{table.class}}</td>
+                <td>{{table.section}}</td>
+                <td>{{table.sub1}}</td>
+                <td>{{table.subj2}}</td>
+                <td>{{table.subj3}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+<div class="main-container">
+    <div class="flex-container">
+        <div style="flex-grow: 6" class="overflow-auto">
+            <app-count-down-timer-comp1>
+            </app-count-down-timer-comp1>
+        </div>
+        <div style="flex-grow: 8" class="overflow-auto">
+            <label for="timer"> Enter time limit:
+                <input type="number" name="timer" id="timer" min=0 [(ngModel)]="counterEnteredValue">
+            </label>
+            <div class="top-spacing">
+                <button class="btn btn-primary qtr-padding-left" (click)="onStartPause()">Start/Pause</button>
+                <button class="btn btn-primary qtr-padding-left" (click)="onReset()">Reset</button>
+            </div>
+            <div class="pull-left top-spacing">
+                <h6 *ngFor="let pausedVal of AllPausedValue"> Paused at {{pausedVal}}</h6>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="flex-container">
+
+        <div class='row overflow-auto'>
+            <div class='column'>
+                <app-time-display-comp2></app-time-display-comp2>
+            </div>
+            <div class='column'>
+                <app-count-display-comp3></app-count-display-comp3>
+            </div>
+        </div>
+
+    </div>
+</div>

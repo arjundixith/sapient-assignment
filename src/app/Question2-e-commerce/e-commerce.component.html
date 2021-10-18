@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="pull-right">
+        <span><i (click)="onIconClick('grid')" class="fa fa-th-large icon-spacing"></i><i (click)="onIconClick('list')"
+                class="fa fa-list icon-spacing"></i></span>
+        <!-- <select name="price" id="min" (change)="min($event)">
+            <option value={{this.minValue}}>Min</option>
+            <option *ngFor="let price of prices" value={{price}}>{{price}}</option>
+        </select> -->
+        <select name="price" id="max" class="icon-margin" (change)="max($event)">
+            <option value="">Max</option>
+            <option *ngFor=" let price of prices" value={{price}}>{{price}}</option>
+        </select>
+
+    </div>
+
+    <div class="products">
+        <div [ngClass]="view=='grid' ? 'product-card-grid' : 'product-card-list'"
+            *ngFor="let productDetails of originalProduct">
+            <div class="product-image">
+                <img src={{productDetails.img}}>
+            </div>
+            <div class="product-info">
+                <h5>{{productDetails.productName}}</h5>
+                <h6>${{productDetails.price}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

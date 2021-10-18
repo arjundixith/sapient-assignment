@@ -1,0 +1,11 @@
+<!-- <p>question6-dynamic-div works!</p>
+<div class="container">
+    <div class="scrollDiv" *ngFor="let divs of addDiv;let i = index"><button (click)="alertClick(i)">{{i+1}}</button>
+    </div>
+</div> -->
+
+
+<cdk-virtual-scroll-viewport itemSize="30" style="height: 430px;overflow-y: scroll;">
+    <div *cdkVirtualFor="let item of items" style="border: 1px solid black"><button (click)="alertDiv(item)">{{item +
+            1}}</button></div>
+</cdk-virtual-scroll-viewport>

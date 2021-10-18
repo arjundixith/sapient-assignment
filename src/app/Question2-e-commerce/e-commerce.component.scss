@@ -1,0 +1,52 @@
+
+.products {
+    display: flex;
+      flex-wrap: wrap;
+      padding-top: 15px;
+      width:100%
+    }
+    
+    .product-card-grid {
+     
+      padding: 1%;
+      flex-basis: 23%;
+     border: 1px solid black;
+      display: flex; /* so child elements can use flexbox stuff too! */
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+    
+    .product-card-list {
+      padding: 2%;
+      flex-basis: 49%;
+      
+     border: 1px solid black;
+      display: flex; /* so child elements can use flexbox stuff too! */
+      margin-bottom: 1%;
+      margin-left: 1%
+    }
+    
+    .product-image img {
+      max-width: 100%;
+      width:100px;
+      height:100px;
+    }
+    
+    .product-info {
+      margin-top: auto;
+    }
+
+    .icon-spacing{
+        padding-left:4px;
+        padding-right: 4px;
+        border:1px solid grey;
+    }
+
+    .pull-icon{
+     margin-left:926px;
+    }
+
+    .icon-margin{
+      margin-left: 12px;
+    }
+    
